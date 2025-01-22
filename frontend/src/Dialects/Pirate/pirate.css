@@ -140,7 +140,7 @@ h2 {
 }
 
 /* Label Styling for 'Enter Text to Translate' */
-label {
+label, h3 {
     font-size: 1.2rem;
     color: #fff; 
     text-shadow: 
