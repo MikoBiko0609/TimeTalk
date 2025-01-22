@@ -7,69 +7,65 @@
     <link rel="stylesheet" href="Home.css">
 </head>
 <body>
-
-    <!-- Header with Buttons for Each Time Period -->
-    <header>
-        <h1><a href="./index.html" class="home-link">Time Talk</a></h1>    
-        <p>Step into the Time Machine and choose an era to transform your words:</p>
-        <div class="button-container">
-            <a href="./src/Dialects/Caveman/caveman.html" class="period-button">Caveman</a>
-            <a href="./src/Dialects/Greek/greek.html" class="period-button">Greek</a>
-            <a href="./src/Dialects/Medieval/medieval.html" class="period-button">Medieval</a>
-            <a href="./src/Dialects/Shakespearian/shakespearian.html" class="period-button">Shakespearian</a>
-            <a href="./src/Dialects/Pirate/pirate.html" class="period-button">Pirate</a>
-            <a href="./src/Dialects/Colonial/colonial.html" class="period-button">Colonial</a>
-            <a href="./src/Dialects/Future/future.html" class="period-button">Future</a>
-        </div>
-    </header>
-
-    <section id="slideshow">
+    <div id="slideshow">
         <div class="slideshow-container">
             <img id="slideshow-image" src="./src/photos/home.jpg" alt="Slideshow Image">
         </div>
-    </section>
+    </div>
+    
+    <div class="content-wrapper">
+        <header>
+            <h1><a href="./index.html" class="home-link">Time Talk</a></h1>    
+            <p>Step into the Time Machine and choose an era to transform your words:</p>
+            <div class="button-container">
+                <a href="./src/Dialects/Caveman/caveman.html" class="period-button">Caveman</a>
+                <a href="./src/Dialects/Greek/greek.html" class="period-button">Greek</a>
+                <a href="./src/Dialects/Medieval/medieval.html" class="period-button">Medieval</a>
+                <a href="./src/Dialects/Shakespearian/shakespearian.html" class="period-button">Shakespearian</a>
+                <a href="./src/Dialects/Pirate/pirate.html" class="period-button">Pirate</a>
+                <a href="./src/Dialects/Colonial/colonial.html" class="period-button">Colonial</a>
+                <a href="./src/Dialects/Future/future.html" class="period-button">Future</a>
+            </div>
+        </header>
+    </div>
 
     <script>
-// Array of images
-const images = [
-    "./src/photos/caveman.jpg",
-    "./src/photos/greek.jpg",
-    "./src/photos/medieval.avif",
-    "./src/photos/shakespearian.jpg",
-    "./src/photos/pirate.avif",
-    "./src/photos/colonial.webp",
-    "./src/photos/modern.webp",
-    "./src/photos/future.webp"
-];
+        // Array of images
+        const images = [
+            "./src/photos/caveman.jpg",
+            "./src/photos/greek.jpg",
+            "./src/photos/medieval.avif",
+            "./src/photos/shakespearian.jpg",
+            "./src/photos/pirate.avif",
+            "./src/photos/colonial.webp",
+            "./src/photos/modern.webp",
+            "./src/photos/future.webp"
+        ];
 
-let currentIndex = 0;
+        let currentIndex = 0;
 
-// Fade in the first image on page load
-window.addEventListener("load", () => {
-    const slideshowImage = document.getElementById("slideshow-image");
-    slideshowImage.style.opacity = 1; // Trigger initial fade-in on load
-});
-
-function updateSlideshow() {
-    const slideshowImage = document.getElementById("slideshow-image");
-
-    if (slideshowImage) {
-        // Fade out the current image
-        slideshowImage.style.opacity = 0;
-
-        // After fade-out, update the image source and fade in
-        setTimeout(() => {
-            slideshowImage.src = images[currentIndex];
-            slideshowImage.alt = `Image of ${images[currentIndex].split('/').pop().split('.')[0]}`;
+        // Fade in the first image on page load
+        window.addEventListener("load", () => {
+            const slideshowImage = document.getElementById("slideshow-image");
             slideshowImage.style.opacity = 1;
+        });
 
-            // Move to the next image
-            currentIndex = (currentIndex + 1) % images.length;
-        }, 1500); // Wait for fade-out before changing the image
-    }
-}
+        function updateSlideshow() {
+            const slideshowImage = document.getElementById("slideshow-image");
 
-// Run the update function every 4 seconds
-setInterval(updateSlideshow, 4000);
+            if (slideshowImage) {
+                slideshowImage.style.opacity = 0;
+
+                setTimeout(() => {
+                    slideshowImage.src = images[currentIndex];
+                    slideshowImage.alt = `Image of ${images[currentIndex].split('/').pop().split('.')[0]}`;
+                    slideshowImage.style.opacity = 1;
+                    currentIndex = (currentIndex + 1) % images.length;
+                }, 1500);
+            }
+        }
+
+        setInterval(updateSlideshow, 4000);
     </script>
+</body>
 </html>
