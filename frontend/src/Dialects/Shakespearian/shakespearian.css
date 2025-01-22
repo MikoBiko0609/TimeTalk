@@ -8,7 +8,7 @@
 /* Background Image Styling */
 body {
     font-family: 'Courier New', Courier, monospace;
-    background-image: url('/frontend/src/photos/shakespearian.jpg'); 
+    background-image: url('../../photos/shakespearian.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

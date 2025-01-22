@@ -8,7 +8,7 @@
 /* Background Image Styling */
 body {
     font-family: 'Courier New', Courier, monospace;
-    background-image: url('/frontend/src/photos/future.webp'); 
+    background-image: url('../../photos/future.webp'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
