@@ -1,3 +1,5 @@
+const BACKEND_URL = 'https://time-talk-backend.onrender.com'; 
+
 async function translateToEra() {
     const userTextElement = document.getElementById("userText");
     const resultDiv = document.getElementById("result");
@@ -19,7 +21,7 @@ async function translateToEra() {
     resultDiv.textContent = "Translating...";
 
     try {
-        const response = await fetch("http://localhost:3000/translate", {
+        const response = await fetch(`${BACKEND_URL}/translate`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
