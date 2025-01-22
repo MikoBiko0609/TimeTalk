@@ -41,11 +41,11 @@ p {
 
 .home-link {
     text-decoration: none;
-    color: inherit; /* Matches the current text color */
+    color: inherit;
 }
 
 .home-link:hover {
-    color: #00ffcc; /* Optional hover effect */
+    color: #00ffcc; 
 }
 
 /* Button Container */
@@ -99,7 +99,6 @@ h1 {
 }
 
 /* Slideshow Container */
-/* Slideshow Container */
 #slideshow {
     display: flex;
     flex-direction: column;
@@ -107,7 +106,7 @@ h1 {
     justify-content: center;
     text-align: center;
     color: #f0f0f0;
-    height: 100%; /* Full viewport height */
+    height: 100%; 
     background-color: #1b1b1b;
 }
 
@@ -119,8 +118,8 @@ h1 {
 
 .slideshow-container {
     position: relative;
-    width: 98vw;  /* Full viewport width */
-    height: calc(100vh - 4rem); /* Adjust to fill most of the screen */
+    width: 98vw; 
+    height: calc(100vh - 4rem); 
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -128,8 +127,8 @@ h1 {
 }
 
 #slideshow-image {
-    width: 100vw;  /* Stretch image to full width of the screen */
-    height: auto;  /* Maintain aspect ratio */
-    transition: opacity 1.5s ease-in-out; /* Smooth fade transition */
+    width: 100vw;  
+    height: auto;
+    transition: opacity 1.5s ease-in-out; 
     opacity: 0;
 }
