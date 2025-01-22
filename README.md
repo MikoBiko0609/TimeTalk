@@ -35,6 +35,7 @@ TimeTalk is a web application that translates modern English text into various h
 - Version Control: Git & GitHub
 
 ## Project Structure
+```bash
 project-root/
 ├── frontend/
 │   ├── src/
@@ -54,7 +55,7 @@ project-root/
 │   └── .gitignore
 │
 └── backend/
-├── server.js
-├── .env
-├── package.json
-└── .gitignore
+    ├── server.js
+    ├── .env
+    ├── package.json
+    └── .gitignore
